@@ -2,12 +2,17 @@
 
  ### Áttekintés, eszközök és nyelvi alapok 2 ###
 
- A bootstrap integrálás nem működik a leírás szerint. Nem jó a csomag elérési útja. Egyszerűen nem találja meg, amit az angular.json - ba írunk. A helyes:
 
-        "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+        ---
+            Ha olyat telepítünk, ami beleír az angular.json - ba,akkor újre ng serve
 
-            ]
+        ---
+            A bootstrap integrálás nem működik a leírás szerint. Nem jó a csomag elérési útja. Egyszerűen nem találja meg, amit az angular.json - ba írunk. A helyes:
 
-Nincs " ../ " a node modules előtt !!           
+                    "styles": [
+                        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                        "src/styles.css"
+
+                        ]
+
+            Nincs " ../ " a node modules előtt !!           
