@@ -6,7 +6,8 @@
         ---
             Ha olyat telepítünk, ami beleír az angular.json - ba,akkor újre ng serve
 
-        ---
+        --- ngx-bootstrap telepítése: 
+        npm install ngx-bootstrap bootstrap --save
             A bootstrap integrálás nem működik a leírás szerint. Nem jó a csomag elérési útja. Egyszerűen nem találja meg, amit az angular.json - ba írunk. A helyes:
 
                     "styles": [
@@ -42,6 +43,19 @@ valami
 </div>
 ------- eventbinding
 <button (dblclick)="demoMouseover($event)">over</button>
-  demoMouseover(ev: MouseEvent) {
- alert(ev.screenX);
-  }
+            demoMouseover(ev: MouseEvent) {
+            alert(ev.screenX);
+            }
+
+------- attribútum binding
+  [disabled]="disabledButton" >{{disabledButton ? 'disabled' : 'enabled'}}</button>
+                disableBtn() {
+                    this.disabledButton = ! this.disabledButton;
+                }
+
+-------- two way data binding ---- ehhez kell egy import az app.module.ts - beleír
+
+<input type="text" [(ngModel)]="inputcontent">
+<textarea>
+  {{inputcontent}}
+</textarea>
