@@ -15,4 +15,28 @@
 
                         ]
 
-            Nincs " ../ " a node modules előtt !!           
+            Nincs " ../ " a node modules előtt !!        
+
+
+ ### Első projekt és Component-ek 1 ###
+
+
+  --- Hogyan működik?            
+
+            angular.json -----> index.html --->  <app-root></app-root> --->angular.json => mert keresi hogy mi az app-root --->main.ts --> app.module.ts (itt megtalálja az appmodul hivatkozást) ---> appmodul.ts (itt: bootstrap: [AppComponent]) ---> app.component.ts (itt a selector az  <app-root></app-root> illetve megnevezi a html tamplete - t ami) ---> app.component.html
+ ### Első projekt és Component-ek 2 ###
+
+ ----- Struktúrális direktíva *ngFor
+ 
+
+ a componetben: events = ['első', 'második', 'harmadik'];
+ tampleteben :
+        <ul>
+                <li *ngFor="let event of events">
+                {{event}}
+                </li>
+        </ul>
+*ngIf
+<div *ngIf="show">
+valami
+</div>
