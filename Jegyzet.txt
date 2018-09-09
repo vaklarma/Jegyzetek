@@ -40,3 +40,8 @@
 <div *ngIf="show">
 valami
 </div>
+------- eventbinding
+<button (dblclick)="demoMouseover($event)">over</button>
+  demoMouseover(ev: MouseEvent) {
+ alert(ev.screenX);
+  }
