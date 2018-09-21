@@ -59,3 +59,10 @@ valami
 <textarea>
   {{inputcontent}}
 </textarea>
+
+
+----------- delete item from list   -------------------- 
+  deleteItemFromList(id: number) {
+
+    this.eventlist = this.eventlist.filter((ev: EventModel) => ev.id !== id);
+  }
