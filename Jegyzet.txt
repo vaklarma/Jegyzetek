@@ -29,7 +29,6 @@
 
  ----- Struktúrális direktíva *ngFor
  
-
  a componetben: events = ['első', 'második', 'harmadik'];
  tampleteben :
         <ul>
